@@ -11,3 +11,10 @@ df = pd.DataFrame(
     }
 )
 df   # 데이터프레임 출력
+
+
+'### :orange[지표(Metric)]'
+col1, col2, col3 = st.columns(3)   # 3개의 컬럼 생성
+col1.metric("Temperature", "70 °F", "1.2 °F")
+col2.metric("Wind", "9 mph", "-8%")
+col3.metric("Humidity", "86%", "4%")
