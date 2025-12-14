@@ -44,6 +44,6 @@ st.scatter_chart(chart_data)
 '#### :orange[st.map()]'
 df = pd.DataFrame(
     np.random.randn(100, 2) / [100, 100] + [37.55, 126.92],
-    colums= ['lat', 'lon'],
+    columns= ['lat', 'lon'],
 )
 st.map(df)
