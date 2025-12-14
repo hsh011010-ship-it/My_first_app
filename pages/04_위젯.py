@@ -89,3 +89,39 @@ st.write(select+'가 선택되었습니다.')
 '### :orange[멀티 셀렉트 박스]'
 multi = st.multiselect('여기에서 여러 값을 선택하세요', ['선택 1', '선택 2', '선택 3'])
 st.write(f'{type(multi) = }, {multi}가 선택되었습니다.')
+
+
+# 슬라이더는 선택된 값을 반환
+'### :orange[슬라이더]'
+slider = st.slider('여기에서 값을 선택하세요', 0, 100, 50)
+st.write(f'현재의 값은 {slider}입니다.')
+
+# 선택 슬라이더는 선택된 값을 반환
+'### :orange[선택 슬라이더]'
+range_slider = st.select_slider('여기에서 값을 선택하세요', options=range(101), value=(25, 75))
+st.write(f'현재의 값은 {range_slider}입니다.')
+
+# 컬러피커는 선택된 값을 반환
+'### :orange[컬러 피커]'
+color = st.color_picker('색을 선택하세요', '#00f900')
+st.write(f'선택된 색은 {color}입니다.')
+
+# 프로그레스 바는 진행 상태를 반환
+import time
+'### :orange[프로그레스 바]'
+button1 = st.button('실시')   # 버튼은 클릭 여부를 반환
+if button1:
+    progress = st.progress(0)   
+    for i in range(101):
+        progress.progress(i)   
+        if i % 20 == 0:
+            st.write(f'진행 상태: {i}%')
+        time.sleep(0.05)
+
+# spinner는 진행 상태를 반환
+'### :orange[스피너]'
+button2 = st.button('로드')   # 버튼은 클릭 여부를 반환
+if button2:
+    with st.spinner('로딩 중입니다...'):
+        time.sleep(3)
+        st.success('로딩 완료!')
