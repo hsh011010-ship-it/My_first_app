@@ -1,8 +1,4 @@
 streamlit
 pandas
 plotly
-<<<<<<< HEAD
 matplotlib
-=======
-matplotlib
->>>>>>> e0e8f2059e8067b5c03a133b6614d6861a60c169
