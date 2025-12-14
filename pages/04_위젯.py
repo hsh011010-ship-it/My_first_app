@@ -71,3 +71,21 @@ if selected is not None:
     
 '### :orange[링크 버튼: st.link_button()]'
 st.link_button("갤러리 링크", "https://streamlit.io/gallery")
+
+
+'### :orange[체크박스]'
+check = st.checkbox('여기를 체크하세요')
+if check:
+    st.write('체크되었습니다.')
+
+'### :orange[라디오 버튼]'
+radio = st.radio('여기에서 선택하세요', ['선택 1', '선택 2', '선택 3'])
+st.write(radio+'가 선택되었습니다.')
+
+'### :orange[셀렉트 박스]'
+select = st.selectbox('여기에서 선택하세요', ['선택 1', '선택 2', '선택 3'])
+st.write(select+'가 선택되었습니다.')
+
+'### :orange[멀티 셀렉트 박스]'
+multi = st.multiselect('여기에서 여러 값을 선택하세요', ['선택 1', '선택 2', '선택 3'])
+st.write(f'{type(multi) = }, {multi}가 선택되었습니다.')
